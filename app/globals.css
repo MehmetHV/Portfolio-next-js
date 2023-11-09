@@ -4,15 +4,15 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 0, 0, 255; /* Blue */
-  --background-end-rgb: 0, 128, 255; /* Light Blue */
+  --background-start-rgb: 173, 216, 230;
+  --background-end-rgb: 0, 0, 102;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 128, 0, 128;
-    --background-end-rgb: 255, 153, 51;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 102, 204;
   }
 }
 
@@ -41,4 +41,36 @@ body {
 .text-bold-outline {
   color: #fdfdfd;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+/* CSS for animations */
+.banner-left {
+  animation: moveLeft 5s linear infinite;
+}
+
+.banner-right {
+  animation: moveRight 5s linear infinite;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

@@ -47,6 +47,7 @@ export default function Home() {
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
+
             {/* About Me section (Top) */}
             <section className="about-me centered-section">
                 <h2 className="text-center text-bold-outline" style={{ fontSize: '60px' }}>
@@ -60,29 +61,51 @@ export default function Home() {
                         I currently study System Development in Trollhättan, Sweden at Högskolan Väst!
                     </p>
                     <p className="text-bold-outline">
-                        This is the third row of text, and you can continue to add more rows as needed.
+                        .
                     </p>
                 </div>
-                <div className="text-center rounded-full overflow-hidden">
+                <div className="text-center rounded-full overflow-hidden mt-10">
                     <img
                         src="https://cdn.discordapp.com/attachments/1112951735321907235/1171993449529094214/image0.jpg?ex=655eb2f4&is=654c3df4&hm=b934d77d01ade6ba9347416851742d5349c026e9060121f48b760e59af67d88b&"
                         alt="Your Photo"
                         style={{
-                            width: '250px', // Adjust the width as needed
-                            height: '250px', // Adjust the height as needed
+                            width: '250px',
+                            height: '250px',
                             objectFit: 'cover',
                             objectPosition: 'center top',
-                            borderRadius: '50%', // Makes it a circle
+                            borderRadius: '50%',
+                        }}
+                    />
+                    <img
+                        src="https://cdn.discordapp.com/attachments/1112951735321907235/1172236326289031279/ElitePortraitbackground.png?ex=655f9527&is=654d2027&hm=fcdb1c66ee3764712fa431a830eed82c7b5bc03c869c044a5dc76857dae15632&"
+                        alt="Golden Dragon"
+                        style={{
+                            width: '500px',
+                            objectFit: 'cover',
+                            objectPosition: 'center',
+                            position: 'absolute',
+                            top: '46%',
+                            left: '53%',
+                            transform: 'translate(-50%, -50%)',
                         }}
                     />
                 </div>
+
+
             </section>
+            <div className="fixed top-0 left-0 h-screen w-1/12 bg-gray-200">
+                {/* Content for the left banner */}
+            </div>
+
+            <div className="fixed top-0 h-screen w-1/12 bg-gray-200 right-0">
+                {/* Content for the right banner */}
+            </div>
 
             {/* Header section */}
             {/* Add your header content here */}
 
             {/* Projects section (Middle) */}
-            <section className="projects">
+            <section className="projects" style={{ marginTop:'10rem'}}>
                 <h2 className="text-bold-outline">My Projects</h2>
                 <div className="project-list">
                     {projects.map((project, index) => (
